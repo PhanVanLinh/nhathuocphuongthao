@@ -15,7 +15,7 @@
                         <a href="#" class="hover:underline">Thực phẩm chức năng</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Blog</a>
+                        <a href="/chinh-sach-bao-mat" class="hover:underline">Chính sách bảo mật</a>
                     </li>
                 </ul>
             </div>
@@ -23,7 +23,7 @@
                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Danh mục</h2>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Facebook</a>
+                        <a href="https://www.facebook.com/nhathuocphuongthao74" class="hover:underline">Facebook</a>
                     </li>
                     <li class="mb-4">
                         <a href="#" class="hover:underline">Contact Us</a>
@@ -100,3 +100,16 @@
         </div>
     </div>
 </footer>
+
+<script>
+    var navMobileMenu = document.getElementById("nav-mobile-menu")
+    navMobileMenu.classList.toggle("hidden")
+
+    document.getElementById("nav-button").onclick = function () {
+        document.getElementById("nav-open").classList.remove("block");
+        document.getElementById("nav-open").classList.toggle("hidden");
+        document.getElementById("nav-close").classList.toggle("hidden");
+
+        navMobileMenu.classList.toggle("hidden")
+    }
+</script>
