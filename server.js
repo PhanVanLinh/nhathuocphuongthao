@@ -23,5 +23,9 @@ app.get('/chinh-sach-bao-mat', function(req, res) {
   res.render('pages/privacy-policy', {title: "Quầy thuốc Phương Thảo", zalo: "0036123456"});
 });
 
+app.get('/captcha', function(req, res) {
+  res.render('pages/captcha');
+});
+
 app.listen(4000);
 console.log('Server is listening on port 4000');
