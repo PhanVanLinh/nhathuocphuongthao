@@ -24,7 +24,8 @@
 
       var verifyCallback = function(response) {
         alert(response);
-        SnackBar.postMessage("IP Address: " + response.ip);
+        const data = { siteKey: 'Alice', token: 30 };
+        SnackBar.postMessage(data);
       };
 
       console.log("script end");
