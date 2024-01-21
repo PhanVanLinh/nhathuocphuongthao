@@ -25,7 +25,7 @@
 
       var verifyCallback = function(response) {
         alert(response);
-        const data = { siteKey: SITE_KEY, token: response };
+        const data = { siteKey: 'SITE_KEY', token: 'response' };
         Recaptcha.postMessage(JSON.stringify(data));
       };
 
