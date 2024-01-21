@@ -12,11 +12,12 @@
       <input type="submit" value="Submit">
     </form>
     <script type="text/javascript">
+      const siteKey = '6LeFQVMpAAAAAA0XCj6SzcA94cx25hu_lbucOb7u';
       console.log("script loaded");
       var onloadCallback = function() {
         console.log("on Load trigger");
         grecaptcha.render('html_element', {
-          'sitekey' : '6LeFQVMpAAAAAA0XCj6SzcA94cx25hu_lbucOb7u',
+          'sitekey' : siteKey,
           'callback' : verifyCallback,
           'theme' : 'dark'
         });
@@ -24,8 +25,8 @@
 
       var verifyCallback = function(response) {
         alert(response);
-        const data = { siteKey: 'Alice', token: 30 };
-        SnackBar.postMessage(JSON.stringify(data));
+        const data = { siteKey: siteKey, token: response };
+        Recaptcha.postMessage(JSON.stringify(data));
       };
 
       console.log("script end");
