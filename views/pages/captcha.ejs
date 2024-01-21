@@ -4,7 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
     <script type="text/javascript">
+      console.log("script loaded");
       var onloadCallback = function() {
+        console.log("on Load trigger");
         grecaptcha.render('html_element', {
           'sitekey' : '6LeFQVMpAAAAAA0XCj6SzcA94cx25hu_lbucOb7u',
           'callback' : verifyCallback,
@@ -16,6 +18,8 @@
         alert(response);
         SnackBar.postMessage("IP Address: " + response.ip);
       };
+
+      console.log("script end");
     </script>
   </head>
   <body>
