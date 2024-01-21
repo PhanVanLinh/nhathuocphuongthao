@@ -24,8 +24,8 @@
       };
 
       var verifyCallback = function(response) {
-        alert(response);
-        const data = { siteKey: SITE_KEY, token: response };
+        //alert(response);
+        const data = { g-recaptcha-site-key: SITE_KEY, g-recaptcha-response: response };
         Print.postMessage(JSON.stringify(data));
       };
 
