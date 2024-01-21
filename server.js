@@ -27,7 +27,7 @@ app.get('/captcha', function(req, res) {
   res.render('pages/captcha');
 });
 
-app.get(') {
+app.get('/recaptcha_enterprise', function(req, res) {
   res.render('pages/recaptcha_enterprise');      
 });        
 
