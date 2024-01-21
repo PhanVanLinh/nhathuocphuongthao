@@ -25,7 +25,7 @@
 
       var verifyCallback = function(response) {
         //alert(response);
-        const data = { g-recaptcha-site-key: SITE_KEY, g-recaptcha-response: response };
+        const data = {"g-recaptcha-site-key": SITE_KEY, "g-recaptcha-response": response};
         Print.postMessage(JSON.stringify(data));
       };
 
