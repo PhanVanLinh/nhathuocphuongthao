@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lcog1cpAAAAAAkwdLfSWm5gRuJ62DcLfvrnyfWi"></script>
+    <!-- Your code -->
+  </head>
+</head>
+<body>
+
+  <button onclick="onClick()">I'm not a robot</button>
+
+  <script>
+    const SITE_KEY = "123";
+
+    function onClick(e) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const action = urlParams.get('action');
+      alert(action);
+
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6Lcog1cpAAAAAAkwdLfSWm5gRuJ62DcLfvrnyfWi', {action: action});
+        alert(token);
+        const data = {"g-recaptcha-site-key": SITE_KEY, "g-recaptcha-response": token};
+        Print.postMessage(JSON.stringify(data));
+      });
+    }
+  </script>
+</body>
+</html>
