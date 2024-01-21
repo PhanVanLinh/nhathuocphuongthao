@@ -5,19 +5,36 @@
     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
   </head>
   <body>
+
     <form action="?" method="POST">
       <div id="html_element"></div>
       <br>
       <input type="submit" value="Submit">
-      <p>Other</p>
     </form>
     <script type="text/javascript">
-     
+      console.log("script loaded");
+      var onloadCallback = function() {
+        console.log("on Load trigger");
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LeFQVMpAAAAAA0XCj6SzcA94cx25hu_lbucOb7u',
+          'callback' : verifyCallback,
+          'theme' : 'dark'
+        });
+      };
+
+      var verifyCallback = function(response) {
+        alert(response);
+        SnackBar.postMessage("IP Address: " + response.ip);
+      };
+
       console.log("script end");
       // Create the H1 element
       const h1 = document.createElement('h1');
       h1.textContent = 'hello';
       document.body.appendChild(h1);
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
     </script>
   </body>
 </html>
