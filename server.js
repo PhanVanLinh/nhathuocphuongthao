@@ -27,5 +27,9 @@ app.get('/captcha', function(req, res) {
   res.render('pages/captcha');
 });
 
+app.get(') {
+  res.render('pages/recaptcha_enterprise');      
+});        
+
 app.listen(4000);
 console.log('Server is listening on port 4000');
