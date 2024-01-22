@@ -15,12 +15,12 @@
     function execute() {
       const urlParams = new URLSearchParams(window.location.search);
       const action = urlParams.get('action');
-      alert(action);
+      //alert(action);
 
       
       grecaptcha.enterprise.ready(async () => {
         const token = await grecaptcha.enterprise.execute('6Lcog1cpAAAAAAkwdLfSWm5gRuJ62DcLfvrnyfWi', {action: action});
-        alert(token);
+        //alert(token);
         const data = {"g-recaptcha-site-key": SITE_KEY, "g-recaptcha-response": token};
         Print.postMessage(JSON.stringify(data));
       });
