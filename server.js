@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/public'));
 
 // index page
 app.get('/', function(req, res) {
-  res.render('pages/home', {title: "Quầy thuốc Phương Thảo", zalo: "0036123456"});
+  res.render('pages/home', {title: "Quầy thuốc Phương Thảo", zalo: "0703.006.336"});
 });
 
 // about page
@@ -20,7 +20,7 @@ app.get('/about', function(req, res) {
 
 //
 app.get('/chinh-sach-bao-mat', function(req, res) {
-  res.render('pages/privacy-policy', {title: "Quầy thuốc Phương Thảo", zalo: "0036123456"});
+  res.render('pages/privacy-policy', {title: "Quầy thuốc Phương Thảo", zalo: "0703.006.336"});
 });
 
 app.get('/captcha', function(req, res) {
