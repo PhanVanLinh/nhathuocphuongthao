@@ -10,7 +10,7 @@
     <%- include('../../partials/header', {}); %>
 
     <!-- Marketing -->
-    <div class="relative isolate overflow-hidden bg-blue-800 py-12 sm:py-24">
+    <div class="relative isolate overflow-hidden bg-blue-800 py-12 sm:py-12">
         <!-- <img src="./bg.jpeg"
             alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"> -->
         <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
@@ -31,26 +31,11 @@
                 <h3 class="text-1xl mt-2 tracking-tight text-white sm:text-2xl sm:mt-8">Thuốc Tốt Cho Cả Gia Đình</h3>
                 <p class="mt-6 text-lg leading-8 text-gray-300">Chuyên bán lẻ thuốc thành phẩm. Mong muốn được chăm sóc, phục vụ sức khỏe cộng đồng với chất lượng tốt nhất và giá cả hợp lý với đội ngũ dược sỹ chuyên môn cao, đáng tin cậy.</p>
             </div>
-            <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-                <div
-                    class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-                    <a href="#">Thuốc <span aria-hidden="true">&rarr;</span></a>
-                    <a href="#">Thực phẩm chức năng <span aria-hidden="true">&rarr;</span></a>
-                    <!-- <a href="#">Thiết bị, dụng cụ y tế <span aria-hidden="true">&rarr;</span></a> -->
-                </div>
-                <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="flex flex-col-reverse">
-                        <dt class="text-base leading-7 text-gray-300">TT Hồ Xá, Vĩnh Linh, Quảng Trị</dt>
-                        <dd class="text-2xl font-bold leading-9 tracking-tight text-white">06 Ngô Quyền</dd>
-                    </div>
-                    <div class="flex flex-col-reverse">
-                        <dt class="text-base leading-7 text-gray-300">Zalo/Số điện thoại</dt>
-                        <dd class="text-2xl font-bold leading-9 tracking-tight text-white"><%= zalo %></dd>
-                    </div>
-                </dl>
-            </div>
+            
         </div>
     </div>
+
+    <%- include('./home_action', {}); %>
 
     <!-- Products -->
     <div class="">
