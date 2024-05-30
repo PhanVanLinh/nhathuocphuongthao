@@ -41,62 +41,18 @@
         <div class="mx-auto max-w-2xl px-4 sm:px-6 py-8 sm:py-12 lg:max-w-7xl lg:px-8">
             <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-center">SẢN PHẨM NỔI BẬT
             </h2>
-
-            <div class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 mt-6">
-                <a href="#" class="group">
-                    <div
-                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
-                            alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
-                            class="h-full w-full object-cover object-center group-hover:opacity-75">
-                    </div>
-                    <h3 class="mt-4 text-sm text-gray-700">Earthen Bottle</h3>
-                    <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-                </a>
-                <a href="#" class="group">
-                    <div
-                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg"
-                            alt="Olive drab green insulated bottle with flared screw lid and flat top."
-                            class="h-full w-full object-cover object-center group-hover:opacity-75">
-                    </div>
-                    <h3 class="mt-4 text-sm text-gray-700">Nomad Tumbler</h3>
-                    <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-                </a>
-                <a href="#" class="group">
-                    <div
-                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg"
-                            alt="Person using a pen to cross a task off a productivity paper card."
-                            class="h-full w-full object-cover object-center group-hover:opacity-75">
-                    </div>
-                    <h3 class="mt-4 text-sm text-gray-700">Focus Paper Refill</h3>
-                    <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
-                </a>
-                <a href="#" class="group">
-                    <div
-                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg"
-                            alt="Hand holding black machined steel mechanical pencil with brass tip and top."
-                            class="h-full w-full object-cover object-center group-hover:opacity-75">
-                    </div>
-                    <h3 class="mt-4 text-sm text-gray-700">Machined Mechanical Pencil</h3>
-                    <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-                </a>
-
-                <!-- More products... -->
-            </div>
+            <%- include('./home_product', {}); %>
         </div>
     </div>
 
     <!-- Section How to buy -->
     <div class="py-8 sm:py-8">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl lg:text-center">
+        <div class="sm:mx-auto max-w-7xl px-4 lg:px-8">
+            <div class="sm:mx-auto lg:text-center">
                 <p class="mt-2 text-2xl font-bold uppercase tracking-tight text-gray-900 sm:text-4xl">MUA THUỐC THUẬN TIỆN HƠN</p>
-                <p class="mt-6 text-lg leading-8 text-gray-600">Chuyên môn - Nhanh chóng - Tận tình</p>
+                <p class="mt-2 sm:mt-6 text-lg leading-8 text-gray-500">Chuyên môn - Nhanh chóng - Tận tình</p>
             </div>
-            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+            <div class="mx-auto mt-6 sm:mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                     <div class="relative pl-16">
                         <dt class="text-base font-semibold leading-7 text-gray-900">
@@ -107,7 +63,7 @@
                             </div>
                             Chat Zalo với Dược sĩ
                         </dt>
-                        <dd class="mt-2 text-base leading-7 text-gray-600">Tư vấn nhanh chóng và hiệu quả về các sản phẩm.<br/>Zalo: <%= zalo %></dd>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Tư vấn nhanh chóng và hiệu quả<br/>Zalo: <%= zalo %></dd>
                     </div>
                     <div class="relative pl-16">
                         <dt class="text-base font-semibold leading-7 text-gray-900">
@@ -131,7 +87,7 @@
                             </div>
                             Đặt giao hoặc nhận thuốc tại quầy thuốc
                         </dt>
-                        <dd class="mt-2 text-base leading-7 text-gray-600">Tiết kiệm thời gian và công sức. Giao hàng nhanh chóng và an toàn, đảm bảo sản phẩm đến tay bạn</dd>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Tiết kiệm thời gian và công sức. Giao hàng nhanh chóng và an toàn.</dd>
                     </div>
                 </dl>
             </div>
@@ -140,19 +96,20 @@
 
     <!-- Section về chúng tôi -->
     <div class="py-8 sm:py-8">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
             <div class="mx-auto max-w-2xl">
                 <p class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-center">VỀ CHÚNG TÔI</p>
-                <div class="mt-6 text-lg leading-8 text-gray-600">Quầy thuốc Phương Thảo thành lập 02/04/2021. Đáp ứng nhu cầu của bà con huyện Vĩnh Linh nói riêng và tỉnh Quảng Trị nói chung; với phương châm “lấy hiệu quả làm đầu”, quầy thuốc Phương Thảo mong nhận được sự ủng hộ của quý khách hàng.
-                                            
-                    <p>Quầy thuốc đạt chuẩn Thực hành thuốc tốt – GPP, với đội ngũ dược sĩ có chuyên môn và giàu kinh nghiệm</p>
-
-                    <p class="sm:text-2xl mt-6">Liên hệ</p>
+                <div class="mt-6 text-lg leading-8 text-gray-600">
+                    <p>Quầy thuốc Phương Thảo thành lập 02/04/2021. Đáp ứng nhu cầu của bà con huyện Vĩnh Linh nói riêng và tỉnh Quảng Trị nói chung</p>
+                    <p>Với phương châm lấy hiệu quả làm đầu, quầy thuốc Phương Thảo mong nhận được sự ủng hộ của quý khách hàng.</p>
+                 
+                    <p>Quầy thuốc đạt chuẩn Thực hành thuốc tốt – <strong>GPP</strong>, với đội ngũ dược sĩ có chuyên môn và giàu kinh nghiệm</p>
+                    <p class="text-xl sm:text-2xl mt-6 text-blue-500"><strong>Liên hệ</strong></p>
                     <ul>
-                        <li>Địa chỉ: 06 Ngô Quyền, TT Hồ Xá, Huyện Vĩnh Linh, Tỉnh Quảng Trị</li>
-                        <li>Điện thoại: <%= zalo %></li>
-                        <li>Email: phuongthaopharmy@gmail.com</li>
-                        <li>Lĩnh vưc kinh doanh: Dược phẩm, mỹ phẩm, thực phẩm chức năng, vật tư, dụng cụ y tế gia đình</li>
+                        <li><strong>Địa chỉ:</strong> 06 Ngô Quyền, Thị trấn Hồ Xá, Huyện Vĩnh Linh, Tỉnh Quảng Trị</li>
+                        <li><strong>Điện thoại:</strong> <%= zalo %></li>
+                        <!-- <li>Email: phuongthaopharmy@gmail.com</li> -->
+                        <li><strong>Lĩnh vực kinh doanh:</strong> Dược phẩm, mỹ phẩm, thực phẩm chức năng, vật tư, dụng cụ y tế gia đình và bỉm sữa</li>
                     </ul>
                 </div>
             </div>
@@ -161,10 +118,10 @@
 
     <!-- Section đối tác -->
     <div class="bg-white py-8 sm:py-12">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
             <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-center">ĐỐI TÁC</h2>
             <div
-                class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                class="mx-auto mt-10 grid max-w-lg grid-cols-6 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                 <img class="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
                     src="./images/partner_bidiphar.jpeg" alt="Transistor" width="158" height="48">
                 <img class="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
@@ -213,7 +170,7 @@
     </div>
 
     <!-- Section địa chỉ -->
-    <div class="bg-white py-8 sm:py-12">
+    <!-- <div class="bg-white py-8 sm:py-12">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 class="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-center">ĐỊA CHỈ</h2>
             <div>
@@ -221,7 +178,7 @@
                     src="./images/map-location.jpeg" alt="Transistor">          
             </div>
         </div>
-    </div>
+    </div> -->
 
     <%- include('../../partials/footer', {}); %>
 
