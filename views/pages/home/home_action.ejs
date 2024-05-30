@@ -1,23 +1,92 @@
-<div class="grid grid-cols-5 gap-4 mt-16">
-    <div>
-        <a href="#" class="block p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+<div class="grid grid-cols-3 gap-4 mt-3 ml-2 mr-2 sm:grid-cols-5">
+    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+        <div class="block p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
             <img class="h-8 w-auto" src="./images/action_medicine.png"
                         alt="Your Company">
             <h5 class="mt-2 text-base font-bold tracking-tight text-gray-900">Cần mua thuốc</h5>
-        </a>    
-    </div>
-    <div>
-        <a href="#" class="block p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+        </div>    
+    </button>
+    <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+        <div class="block p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
             <img class="h-8 w-auto" src="./images/action_nurse.png"
                         alt="Your Company">
             <h5 class="mt-2 text-base font-bold tracking-tight text-gray-900">Tư vấn với dược sĩ</h5>
-        </a>    
-    </div>
-    <div>
-        <a href="#" class="block p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+        </div>    
+    </button>
+    <button data-modal-target="popup-modal-address" data-modal-toggle="popup-modal-address" class="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+        <div class="block p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
             <img class="h-8 w-auto" src="./images/action_location.png"
                         alt="Your Company">
             <h5 class="mt-2 text-base font-bold tracking-tight text-gray-900">Địa chỉ quầy thuốc</h5>
-        </a>   
+        </div>   
+    </button>
+</div>
+    
+<div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-2xl shadow">
+            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+
+            <div class="p-4 md:p-5 text-center font-semibold">
+                <h1 class="text-2xl">Liên hệ tư vấn qua</h1>
+            </div>
+            
+            <div class="p-4 border-2 border-gray-500 mx-4">
+                <a href="https://zalo.me/0703006336" style="
+                flex-direction: column;
+                display: flex;
+                 justify-content: center; 
+                 align-items: center;">
+                    <img class="w-20 h-20" src="./images/ic_zalo.png"
+                        alt="Your Company"/>
+                    <span class="text-blue-600"><%= zalo %></span>        
+                </a>
+            </div>
+            <div class="mt-4"></div>
+            <div class="p-4 border-2 border-gray-500 mx-4" >
+                <a href="https://www.facebook.com/nhathuocphuongthao.vn" style="
+                flex-direction: column;
+                display: flex;
+                 justify-content: center; 
+                 align-items: center;">
+                    <img class="w-16 h-16" src="./images/ic_facebook.png"
+                    alt="Your Company"/>
+                <span class="text-blue-600">facebook.com/nhathuocphuongthao.vn</span>        
+                    </a>
+                </div>
+            <div class="mt-2 p-3 text-center text-gray-500">
+                <p>Chúng tôi sẽ phản hồi trong thời gian sớm nhất</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="popup-modal-address" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-2xl shadow">
+            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal-address">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+
+            <div class="p-4 md:p-5 text-center font-semibold">
+                <h1 class="text-2xl">Địa chỉ quầy thuốc</h1>
+            </div>
+            <div class="p-3 text-center text-md font-semibold">
+                06 Ngô Quyền, Thị Trấn Hồ Xá, Vĩnh Linh<br/>Quảng Trị
+            </div>
+            <div class="p-1 text-center text-md font-medium">
+                Sdt:Zalo: <%= zalo %></dd>
+            </div>
+            <div class="p-3"></div>
+        </div>
     </div>
 </div>
